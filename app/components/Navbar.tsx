@@ -50,11 +50,11 @@ const Navbar = () => {
         {
           menuOpen && (
             <div className="md:hidden bg-gray-800 border-t border-gray-700 px-6 py-4 space-y-2 space-x-4 text-center">
-              <NavLink className={({isActive}) => isActive ? active: base} to='/'>Home</NavLink>
-              <NavLink className={({isActive}) => isActive ? active: base} to='/projects'>Projects</NavLink>
-              <NavLink className={({isActive}) => isActive ? active: base} to='/blog'>Blog</NavLink>
-              <NavLink className={({isActive}) => isActive ? active: base} to='/about'>About</NavLink>
-              <NavLink className={({isActive}) => isActive ? active: base} to='/contact'>Contact</NavLink>
+              <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/'>Home</NavLink>
+              <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/projects'>Projects</NavLink>
+              <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/blog'>Blog</NavLink>
+              <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/about'>About</NavLink>
+              <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/contact'>Contact</NavLink>
             </div>
           )
         }
