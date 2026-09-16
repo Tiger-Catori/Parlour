@@ -1,11 +1,9 @@
 const ProjectPage = () => {
   return (
     <>
-      <section>
         <h2 className="text-3xl font-bold text-white mb-2">
           Projects
         </h2>
-      </section>
     </>
 
   )
