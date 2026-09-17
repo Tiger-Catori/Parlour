@@ -1,5 +1,7 @@
 import type { Route } from "./+types/details";
 import type { Project } from "~/types";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router";
 
 export async function clientLoader({ request, params }:Route.ClientLoaderArgs): Promise<Project> {
   const res = await fetch(`http://localhost:8000/projects/${params.id}`);
@@ -19,10 +21,32 @@ export function HydrateFallback() {
 
 const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
   const project = loaderData;
-  console.log(project);
+
   return (
     <>
-      Project Details
+      <Link className="flex items-center text-green-500 mb-6 transition" to='/projects'>
+        <FaArrowLeft className="mr-2"/>
+      </Link>
+      <div className="grid gap-8 md:grid-cols-2 items-start">
+        <div>
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full rounded-lg shadow-md" />
+        </div>
+        <div>
+          <h1 className="text-3xl font-bold text-green-400 mb-4">{project.title}</h1>
+          <p className="text-gray-900 text-sm mb-4">
+            {new Date(project.date).toLocaleDateString()} - {project.category}
+          </p>
+          <p className="text-gray-800 mb-6">{project.description}</p>
+          <a
+            href={project.url}
+            target="_blank"
+            className="inline-block text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded transition">
+            View Live Site →</a>
+        </div>
+      </div>
     </>
   );
 }
