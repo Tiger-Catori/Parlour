@@ -1,6 +1,11 @@
 import { Link } from "react-router";
 
-const HeroComponent = ({ name = '[NAME]', text = 'Showcasing the potential of a new genre in social media!'}) => {
+type HeroProps = {
+  name?: string;
+  text?: string;
+}
+
+const HeroComponent:React.FC<HeroProps> = ({ name = '[NAME]', text = 'Showcasing my portfolio of various projects.'}) => {
   return (
     <>
       <Hero name={name} text={text} />
@@ -10,7 +15,7 @@ const HeroComponent = ({ name = '[NAME]', text = 'Showcasing the potential of a 
 }
 export default HeroComponent;
 
-const Hero = ({ name, text }) => {
+const Hero:React.FC<HeroProps> = ({ name, text }) => {
   return (
     <>
       <header className="text-center py-20 px-4 bg-gray-900 text-white transition-colors duration-300">

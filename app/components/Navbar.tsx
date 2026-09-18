@@ -27,7 +27,7 @@ const Navbar = () => {
 
           {/*Desktop Nav*/}
           <div className="hidden md:flex items-center gap-6">
-            <div className="space-x-4 text-sm text-gray-300">
+            <div className="space-x-4 text-sm text-gray-100">
               <NavLink className={({isActive}) => isActive ? active: base} to='/'>Home</NavLink>
               <NavLink className={({isActive}) => isActive ? active: base} to='/projects'>Projects</NavLink>
               <NavLink className={({isActive}) => isActive ? active: base} to='/blog'>Blog</NavLink>
@@ -49,7 +49,7 @@ const Navbar = () => {
         {/*Mobile Nav*/}
         {
           menuOpen && (
-            <div className="md:hidden bg-gray-800 border-t border-gray-700 px-6 py-4 space-y-2 space-x-4 text-center">
+            <div className="md:hidden bg-gray-800 border-t border-gray-700 px-6 py-4 space-y-2 space-x-4 text-center text-gray-100">
               <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/'>Home</NavLink>
               <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/projects'>Projects</NavLink>
               <NavLink onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? active: base} to='/blog'>Blog</NavLink>
