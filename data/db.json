@@ -18,11 +18,11 @@
       "url": "https://example.com",
       "date": "2026-04-01",
       "category": "Frontend",
-      "featured": true
+      "featured": false
     },
     {
       "id": 3,
-      "title": "FascoWaters",
+      "title": "Fasco Waters",
       "description": "A bottled-water brand site showcasing Fasco’s premium drinking water, quality standards, distribution services, and convenient ordering app.",
       "image": "/images/portfolio-01.webp",
       "url": "https://fascowaters.com/",
@@ -43,12 +43,12 @@
     {
       "id": 5,
       "title": "Crypto-currency App",
-      "description": "A Crypto currency mobile application for the android platform",
+      "description": "A Crypto-currency exchange mobile application for the android platform.",
       "image": "/images/portfolio-05.png",
       "url": "https://github.com/Tiger-Catori/Individual-Project",
       "date": "2024-09-01",
       "category": "Mobile",
-      "featured": false
+      "featured": true
     }
   ]
 }
