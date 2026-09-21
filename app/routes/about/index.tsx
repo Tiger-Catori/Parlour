@@ -1,3 +1,12 @@
+import type { Route } from "./+types/index";
+
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "The Parlour Website | About" },
+    { name: "description", content: "Custom website development" },
+  ];
+}
+
 const AboutPage = () => {
   return (
     <>
