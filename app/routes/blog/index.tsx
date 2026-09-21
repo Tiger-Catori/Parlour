@@ -1,7 +1,7 @@
 const BlogPage = () => {
   return (
     <>
-        <h2 className="text-3xl font-bold text-white mb-2">
+        <h2 className="text-3xl font-bold text-green-600 mb-2">
           Blog
         </h2>
     </>
