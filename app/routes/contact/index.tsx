@@ -1,4 +1,20 @@
 import type { Route } from "./+types/index";
+import { Form } from "react-router";
+
+export async function action({ request }: Route.ActionArgs) {
+  const formData = await request.formData();
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const subject = formData.get('subject');
+  const message = formData.get('message');
+  const data = {
+    name,
+    email,
+    subject,
+    message
+  };
+  return {message: 'Form submitted successfully', data}
+}
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -7,11 +23,14 @@ export function meta({ }: Route.MetaArgs) {
   ];
 }
 
-const ContactPage = () => {
+const ContactPage = ({actionData}: Route.ComponentProps) => {
   return (
     <div className="max-w-3xl mx-auto mt-13 px-10 py-8 bg-green-200 rounded-lg">
       <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Contact Me</h2>
-      <form className="space-y-6">
+      {actionData?.message ? (
+        <p className="mb-6 bg-red-500 text-white text-center text-sm
+          rounded-sm shadow-md py-2">{actionData.message}</p>) : null}
+      <Form method="post" className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-md font-medium text-gray-900">
             Full Name
@@ -51,7 +70,7 @@ const ContactPage = () => {
         <button className="text-lg cursor-pointer w-full bg-green-600 text-white py-3 rounded-sm hover:bg-green-700">
           Send Message
         </button>
-      </form>
+      </Form>
     </div>
   )
 }
