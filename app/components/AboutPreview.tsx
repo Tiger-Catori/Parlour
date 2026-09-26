@@ -14,7 +14,7 @@ const AboutPreview = () => {
           Hi, my name is Michael. I am a software developer who's skills range from web and mobile apps to cloud computing.
         </p>
         <Link to='/about' className="inline-block text-green-400 hover:underline text-sm">
-          Learn more about me.
+          Learn more about me →
         </Link>
       </div>
     </section>
