@@ -59,9 +59,9 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
             type="text" id="name" name="name"
             className="w-full mt-1 px-4 py-2
             rounded-sm bg-white text-gray-900"/>
-          {errors.email && (
+          {errors.name && (
             <p className=" text-red-500 text-sm mt-1">
-              {errors.email}
+              {errors.name}
             </p>
           )}
         </div>
@@ -73,9 +73,9 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
             type="email" id="email" name="email"
             className="w-full mt-1 px-4 py-2
             rounded-sm bg-white text-gray-900"/>
-            {errors.name && (
+            {errors.email && (
               <p className=" text-red-500 text-sm mt-1">
-                {errors.name}
+                {errors.email}
               </p>
             )}
         </div>
