@@ -9,7 +9,7 @@ export function meta({ }: Route.MetaArgs) {
 
 const AboutPage = () => {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16 bg-green-100 rounded-lg">
+    <div className="max-w-5xl mx-auto px-6 py-16 bg-green-200 rounded-lg">
       {/* Intro */}
       <div className="flex flex-col md:flex-row md:items-start items-center gap-10 mb-12">
         <img src="/images/profile.webp" alt="profile"
@@ -17,7 +17,7 @@ const AboutPage = () => {
       </div>
 
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        <h1 className="text-3xl font-semibold text-gray-900 mb-2">
           Hello, I'm Michael
         </h1>
         <p className="text-gray-900 text-lg">

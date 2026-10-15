@@ -18,11 +18,20 @@ export default HeroComponent;
 const Hero:React.FC<HeroProps> = ({ name, text }) => {
   return (
     <>
-      <header className="text-center py-20 px-4 bg-gray-900 text-white transition-colors duration-300">
-        <h2 className="text-4xl font-bold mb-4">
+      <header
+        className="text-center py-30 px-4 bg-gray-900 text-white transition-colors duration-300"
+        style={{
+          // backgroundImage: "url('/images/hero-image.png')",
+          backgroundImage: "url('/images/hero-bg.jpeg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition:"50% 100%"
+                }}
+      >
+        <h2 className="text-4xl font-bold mb-4 text-green-400">
           Hello, my name is {name}.
         </h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-6">
+        <p className="text-lg text-gray-300 font-medium max-w-2xl mx-auto mb-6">
           {text}
         </p>
         <div className="flex justify-center gap-4">

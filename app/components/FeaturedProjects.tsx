@@ -11,7 +11,7 @@ const FeaturedProjects = ({ projects, count = 4 }:FeaturedProjectsProps) => {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 text-green-700">
+      <h2 className="text-2xl font-bold mb-6 text-green-600">
         Featured Projects
       </h2>
       <div className="grid gap-6 sm:grid-cols-2">
